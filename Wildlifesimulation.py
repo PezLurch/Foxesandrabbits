@@ -4,14 +4,14 @@ from Wildlife import *
 import matplotlib.pyplot as plt
 
 windowsize = 1000
-quantityone = 2
+quantityone = 10
 quantitytwo = 10
 stepsizeone = 10
 stepsizetwo = 10
 reproductionthreshold = 3
 rabbitreproductionmax = 4
 foxreproductionmax = 7
-maxpop = 1000
+maxpop = 10
 
 
 wildlife = Wildlife(quantityone, quantitytwo, windowsize, reproductionthreshold)
