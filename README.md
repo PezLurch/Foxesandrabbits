@@ -17,5 +17,7 @@ The following things happen:
 
  - Pressing the space bar, we get a matplotlib plot showing the population development so far.
 
+<img width="506" alt="Screenshot 2023-10-16 at 15 24 11" src="https://github.com/PezLurch/Foxesandrabbits/assets/36110820/aadb3939-6767-4a07-93ae-0024e2b4ba4d">
+
    
 It's not completely thought. The intention is to play around with the parameters and see under which conditions this system is stable and under which it "collapses".
