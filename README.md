@@ -1,17 +1,21 @@
 # Wildlifesimulation
 
-This "simulates" some sort of "natural situation":
+This is a project I did as a student. It "simulates" and visualizes the following set up:
 
-There are foxes and rabbits. They are being printed onto a window using pygame. 
+There are foxes and rabbits. Their positions are being visualized with circles in a window. 
 
-The foxes eat the rabbits when they are close enough to them and when their stomach is not empty. 
-Eating a rabbit adds +1 to the stomache attribute of the fox (and removes the rabbit from the game). 
+The following things happen:
+ - The foxes eat the rabbits when they are close enough to them and when their stomach is not full. 
+   Eating a rabbit adds +1 to the stomache attribute of the fox (and removes the rabbit from the game). 
 
-If the stomach is empty, the fox dies.
+ - If the stomach of a fox or a rabbit is empty, the fox/rabbit dies.
 
-There is also gras which regrows at a certain pace. The rabbits can eat of the gras which reduces it. 
-Also here, eating gras makes stomach += 1 and in case the stomach is empty, the rabbit dies. 
+ - There is also gras which regrows at a certain pace. The rabbits can eat of the gras which reduces it. 
+   Also here, eating gras makes stomach += 1 and in case the stomach is empty, the rabbit dies. 
 
-It's not completely thought throw but quite a lot of fun to play around with the parameters 
-to see if the foxes kill all rabbits and then die of hunger, or die of hunger and only rabbits remain
-or if there is some sort of sustainable system. 
+ - Rabbits and foxes reproduce at some rate (can be specified in new_main.py) when their stomach is sufficiently full.
+
+ - Pressing the space bar, we get a matplotlib plot showing the population development so far.
+
+   
+It's not completely thought. The intention is to play around with the parameters and see under which conditions this system is stable and under which it "collapses".
