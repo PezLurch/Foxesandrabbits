@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from the_animals import Animal, Fox, Rabbit
 
 #global variables
-screensize = 500
+screensize = 1000
 fox_speed = 15
 fox_digest_time = 30
 fox_breed_rate = 100
@@ -24,13 +24,13 @@ rabbit_breed_amount = 5
 rabbit_speed = 15
 rabbit_digest_time = 10
 
-max_new_gras = 40
+max_new_gras = 400
 safety_distance = 7
 
 
 #setup in the beginning
-number_of_foxes = 10
-number_of_rabbits = 60
+number_of_foxes = 40
+number_of_rabbits = 50
 
 
 

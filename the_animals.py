@@ -55,34 +55,6 @@ class Animal():
         else:
             self.diry = random.randint(-self.speed,self.speed)
         return self 
-
-#  if self.dirx >= 0 and self.posx <= self.screensize - 10:
-#             self.dirx = random.randint(-1,self.speed)
-#         elif self.posx <= 10:
-#             self.dirx = random.randint(-1,self.speed)
-#         else:
-#             self.dirx = random.randint(-self.speed,1)
-#         if self.diry >= 0 and self.posy <= self.screensize - 10:
-#             self.diry = random.randint(-1,self.speed)
-#         elif self.posy <= 10:
-#             self.diry = random.randint(-1,self.speed)
-#         else:
-#             self.diry = random.randint(-self.speed,1)
-#         return self
-
-        # if self.posx <= self.screensize - 10:
-        #     self.dirx = random.randint(-1,self.speed)
-        # elif self.posx <= 10:
-        #     self.dirx = random.randint(-1,self.speed)
-        # else:
-        #     self.dirx = random.randint(-self.speed,1)
-        # if self.diry >= 0 and self.posy <= self.screensize - 10:
-        #     self.diry = random.randint(-1,self.speed)
-        # elif self.posy <= 10:
-        #     self.diry = random.randint(-1,self.speed)
-        # else:
-        #     self.diry = random.randint(-self.speed,1)
-        # return self
     
     def draw_animal(self,screen):
         pygame.draw.circle(screen, self.color, [self.posx, self.posy], 5)
