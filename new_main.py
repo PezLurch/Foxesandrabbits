@@ -12,11 +12,11 @@ import matplotlib.pyplot as plt
 from the_animals import Animal, Fox, Rabbit
 
 #global variables
-screensize = 1000
+screensize = 500
 fox_speed = 15
-fox_digest_time = 30
+fox_digest_time = 20
 fox_breed_rate = 100
-fox_breed_amount = 3
+fox_breed_amount = 2
 
 rabbit_breed_time = 5
 rabbit_breed_rate = 10
@@ -24,7 +24,7 @@ rabbit_breed_amount = 5
 rabbit_speed = 15
 rabbit_digest_time = 10
 
-max_new_gras = 400
+max_new_gras = 70
 safety_distance = 7
 
 
@@ -136,10 +136,10 @@ def main():
             rabbit.moveanimal()
             rabbit.draw_animal(screen)
         #print(len(foxes),len(rabbits), foxes[0].dirx, foxes[0].diry)
-
-        total_foxes.append(len(foxes))
-        total_rabbits.append(len(rabbits))
-        total_food.append(food)
+        if index %10 == 0:
+            total_foxes.append(len(foxes))
+            total_rabbits.append(len(rabbits))
+            total_food.append(food)
 
         clock.tick(200)
         #output.setText(slider.getValue())
