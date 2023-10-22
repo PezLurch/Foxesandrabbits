@@ -38,26 +38,40 @@ class Animal():
         self.posy += self.diry
         return self
     
+    def updatedirection_det(self):
+        if self.posx >= self.screensize - self.speed:
+            self.dirx = -self.speed#random.randint(-self.speed,0)
+        elif self.posx <= self.speed:
+            self.dirx = self.speed#random.randint(0,self.speed)
+
+        
+        if self.posy >= self.screensize - self.speed:
+            self.diry = -self.speed#random.randint(-self.speed,0)
+        elif self.posy <= self.speed:
+            self.diry = self.speed#random.randint(0,self.speed)
+
+
+
     def updatedirection(self):
         ##TO DO: MAKE THIS LOOK MORE NATURAL
         
         if self.posx >= self.screensize - self.speed:
-            self.dirx = random.randint(-self.speed,1)
+            self.dirx = -self.speed#random.randint(-self.speed,0)
         elif self.posx <= self.speed:
-            self.dirx = random.randint(-1,self.speed)
+            self.dirx = self.speed#random.randint(0,self.speed)
         else: 
             self.dirx = random.randint(-self.speed,self.speed)
         
         if self.posy >= self.screensize - self.speed:
-            self.diry = random.randint(-self.speed,1)
+            self.diry = -self.speed#random.randint(-self.speed,0)
         elif self.posy <= self.speed:
-            self.diry = random.randint(-1,self.speed)
+            self.diry = self.speed#random.randint(0,self.speed)
         else:
             self.diry = random.randint(-self.speed,self.speed)
         return self 
     
     def draw_animal(self,screen):
-        pygame.draw.circle(screen, self.color, [self.posx, self.posy], 5)
+        pygame.draw.circle(screen, pygame.Color(self.color), [self.posx, self.posy], 5)
     
 
     def digest(self):
