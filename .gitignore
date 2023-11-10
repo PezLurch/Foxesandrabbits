@@ -3,3 +3,5 @@
 Animals.py
 Wildlifesimulation.py
 Wildlife.py
+Dockerfile
+**/create_data/

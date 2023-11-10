@@ -7,6 +7,10 @@ import pygame
 import random
 import sys
 import time 
+import sys
+import time 
+from random import randint as randint
+import matplotlib.pyplot as plt
 
 
 class Animal():
@@ -98,3 +102,24 @@ class Rabbit(Animal):
 
 
 
+def create_random_fox(screensize,fox_speed):
+    return Fox(randint(0,screensize),randint(0,screensize),15,15,fox_speed,screensize,0)
+
+def create_random_rabbit(screensize,rabbit_speed):
+    return Rabbit(randint(0,screensize),randint(0,screensize),15,15,rabbit_speed,screensize,0)
+
+
+def reproduce(rate,amount):
+    return randint(0,amount) if randint(0,rate) == 1 else 0
+
+
+def plot_populations_and_gras(track_fox_population,track_rabbit_population,track_gras):
+    plt.plot(track_fox_population, label = "foxes")
+    plt.plot(track_rabbit_population, label = "rabbits")
+    plt.plot(track_gras, label = "gras")
+    plt.legend()
+    plt.show()
+
+
+def rand_fox_speed(fox_speed):
+    return randint(1,fox_speed)

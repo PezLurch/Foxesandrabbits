@@ -10,6 +10,7 @@ from random import randint as randint
 import matplotlib.pyplot as plt
 
 from the_animals import Animal, Fox, Rabbit
+from the_animals import create_random_fox, create_random_rabbit,reproduce,plot_populations_and_gras,rand_fox_speed
 
 #global variables
 screensize = 500
@@ -34,30 +35,6 @@ population_tracking_rate = 10
 number_of_foxes = 40
 number_of_rabbits = 50
 
-
-
-def create_random_fox():
-    return Fox(randint(0,screensize),randint(0,screensize),15,15,fox_speed,screensize,0)
-
-def create_random_rabbit():
-    return Rabbit(randint(0,screensize),randint(0,screensize),15,15,rabbit_speed,screensize,0)
-
-
-def reproduce(rate,amount):
-    return randint(0,amount) if randint(0,rate) == 1 else 0
-
-
-def plot_populations_and_gras(track_fox_population,track_rabbit_population,track_gras):
-    plt.plot(track_fox_population, label = "foxes")
-    plt.plot(track_rabbit_population, label = "rabbits")
-    plt.plot(track_gras, label = "gras")
-    plt.legend()
-    plt.show()
-
-
-def rand_fox_speed(fox_speed):
-    return randint(1,fox_speed)
-
 def main():
     #Set up pygame
     pygame.init()
@@ -73,8 +50,8 @@ def main():
 
 
     #create random lists of foxes and rabbits
-    foxes = [create_random_fox() for _ in range(number_of_foxes)]
-    rabbits = [create_random_rabbit() for _ in range(number_of_rabbits)]
+    foxes = [create_random_fox(screensize,fox_speed) for _ in range(number_of_foxes)]
+    rabbits = [create_random_rabbit(screensize,rabbit_speed) for _ in range(number_of_rabbits)]
     
     #variables that are changed within the simulation have to be defined within the main function
     index = 0
@@ -160,7 +137,7 @@ def main():
             track_gras.append(gras)
 
         clock.tick(200)
-       
+        print(index)
         pygame.display.flip()
 
 if __name__ == "__main__":
